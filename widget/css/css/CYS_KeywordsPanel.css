@@ -1,0 +1,19 @@
+.cys-keywordspanel-box{
+	margin: 0;
+	padding: 0;
+	background: #fff;
+}
+.cys-keywordspanel-box .cys-keywordspanel-group{
+	margin: 5px;
+	padding: 0;
+}
+.cys-keywordspanel-box .cys-keywordspanel-group .cys-keywordspanel-item{
+	list-style: none;
+	background: #F2F2F2;
+	color: #000;
+	border-radius: 20px;
+	padding: 5px 10px;
+	font-size: 12px;
+	display: inline-block;
+	margin: 5px 5px 5px 0px;
+}

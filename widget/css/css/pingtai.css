@@ -1,0 +1,10 @@
+.span{
+    font-size: 15px;
+    position: absolute;
+    width: 3rem;
+    font-family: 黑体;
+    top: 10px;
+    left: 40px;
+    padding: 2px;
+    color: #fff;
+}
