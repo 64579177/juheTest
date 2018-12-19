@@ -150,24 +150,25 @@
 
   apiready = function(){
 
-	//下拉刷新
-          api.setCustomRefreshHeaderInfo({
-              bgColor : '#fff',
-               //注释images: ['widget://image/app/xiala/cd.png',],         // 
-			  images: ['widget://image/app/xiala/1.png','widget://image/app/xiala/2.png','widget://image/app/xiala/3.png','widget://image/app/xiala/4.png','widget://image/app/xiala/5.png','widget://image/app/xiala/6.png',],
-                      tips: {
-                          pull: '你…你想干什么！要刷新数据就拉到位！',
-                          threshold: '讨厌 快放开我 非礼呀！',
-                          load: '正在刷新页面数据，请等待。。。'
-                      }
+		//下拉刷新
+				api.setCustomRefreshHeaderInfo({
+						bgColor : '#fff',
+						 images: [
+									'widget://image/app/xiala/cd.png',
+										],
+										tips: {
+												pull: '你…你想干什么！你不要过来！',
+												threshold: '讨厌 快放开我 非礼呀！',
+												load: '完美网服 服务完美'
+										}
 
-          }, function() {
-              //下拉刷新被触发，自动进入加载状态，使用 api.refreshHeaderLoadDone() 手动结束加载中状态
-              setTimeout(function(){
-          api.refreshHeaderLoadDone()
-              }, 3000);
-          });
-          //下拉刷新
+				}, function() {
+						//下拉刷新被触发，自动进入加载状态，使用 api.refreshHeaderLoadDone() 手动结束加载中状态
+						setTimeout(function(){
+				api.refreshHeaderLoadDone()
+						}, 3000);
+				});
+				//下拉刷新
 
 
   }

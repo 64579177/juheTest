@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <html>
 <head>
     <meta charset="utf-8">
@@ -61,7 +62,7 @@
                                       <img src="http://www.17sucai.com/preview/1268063/2018-08-01/Book/images/icon-lv.png" alt="">
                                     </em>
   -->
-                                        <i  id="islogin"  >快影欢迎您！</i>
+                                        <i  id="islogin"  >聚视界欢迎您！</i>
                                 </h4>
 
                                 <div style="float:left;border:solid 1px 000;"  id="islogin_vip" ></div>
@@ -101,7 +102,7 @@
                                       <img src="../image/app/cz.png" alt="">
                                   </div>
                                     <div class="aui-palace-grid-text">
-                                        <h2>充值会员</h2>
+                                        <h2>会员开通</h2>
                                     </div>
                                 </a>
                                 <a onClick="openWin('share_win')" class="aui-palace-grid">
@@ -127,13 +128,51 @@
                                         <h2>直播币</h2>
                                     </div>
                                 </a> -->
-                                <a onClick="openWin('jifen_win')" class="aui-palace-grid aui-palace-grid-line">
+                                <a href="javascript:;" class="aui-palace-grid aui-palace-grid-line">
                                     <div class="aui-palace-grid-icon">
-                                        <img src="../image/app/jf.png" alt="">
+                                        <img src="../image/app/wode.png" alt="">
                                     </div>
                                     <div class="aui-palace-grid-text">
-                                        <h2>积分兑换</h2>
-                                  
+                                        <h2>我的</h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="aui-card-white">
+                            <div class="aui-palace aui-palace-clear clearfix">
+                                <a onClick="DailiGuanLi()"  class="aui-palace-grid">
+                                    <div class="aui-palace-grid-icon">
+                                        <img src="../image/app/dailiyonghu.png" alt="">
+                                    </div>
+                                    <div class="aui-palace-grid-text">
+                                        <h2>用户管理</h2>
+                                    </div>
+                                </a>
+                                <a onClick="DailiShezhi()"  class="aui-palace-grid">
+                                    <div class="aui-palace-grid-icon">
+                                        <img src="../image/app/dailihelp.png" alt="">
+                                    </div>
+                                    <div class="aui-palace-grid-text">
+                                        <h2>APP设置</h2>
+                                    </div>
+                                </a>
+
+                                     <a onClick="DailiQuma()"  class="aui-palace-grid">
+                            <!--    <a onClick="openWin('daili_login_win')"  class="aui-palace-grid"> 版本2 -->
+                            <!--    <a onClick="openWin('daili')" class="aui-palace-grid"> 版本1-->
+                                    <div class="aui-palace-grid-icon">
+                                        <img src="../image/app/dl.png" alt="">
+                                    </div>
+                                    <div class="aui-palace-grid-text">
+                                        <h2>自助取码</h2>
+                                    </div>
+                                </a>
+                                <a onClick="openWin('djjj_win')"   class="aui-palace-grid aui-palace-grid-line">
+                                    <div class="aui-palace-grid-icon">
+                                        <img src="../image/app/dlzq.png" alt="">
+                                    </div>
+                                    <div class="aui-palace-grid-text">
+                                        <h2>赚钱</h2>
                                     </div>
                                 </a>
                             </div>
@@ -154,7 +193,7 @@
                             <span class="aui-well-item-fr"></span>
                         </a>
 
-
+      
 
 
                             <a onClick="openWin('guankan_help_win')"  class="aui-well-item">
@@ -166,33 +205,6 @@
                             </div>
                             <span class="aui-well-item-fr"></span>
                         </a>
-						     <!--a onClick="openWin('daili_win')"  class="aui-well-item">
-                            <div class="aui-well-item-hd">
-                                <img src="../image/app/videohelp.png" alt="">
-                            </div>
-                            <div class="aui-well-item-bd">
-                                <h3>代理介绍</h3>
-                            </div>
-                            <span class="aui-well-item-fr"></span>
-                        </a-->
-						<!--<a onClick="openWin('kf_win')"  class="aui-well-item">
-						<div class="aui-well-item-hd">
-                                <img src="../image/app/videohelp.png" alt="">
-                            </div>
-                            <div class="aui-well-item-bd">
-                                <h3>代理咨询</h3>
-                            </div>
-                            <span class="aui-well-item-fr"></span>
-                        </a>-->
-							<!--a onClick="openServiceWindow()"  class="aui-well-item">
-                            <div class="aui-well-item-hd">
-                                <img src="../image/app/videohelp.png" alt="">
-                            </div>
-                            <div class="aui-well-item-bd">
-                                <h3>代理咨询</h3>
-                            </div>
-                            <span class="aui-well-item-fr"></span>
-                        </a-->
 <!--
                    <a  onClick="liuyan()" class="aui-well-item">
                             <div class="aui-well-item-hd">
@@ -247,7 +259,7 @@
                             <div class="aui-well-item-bd">
                                 <h3>关于我们</h3>
                             </div>
-                            <span class="aui-well-item-fr"  style=" font-size: 12px; "  onClick="api.alert({title: '免责声明',msg: '本站所有视频均来自互联网，版权归原创者所有，如果侵犯了您的权益，请通知我们，我们将会在3个正常工作日内删除其侵权内容，谢谢合作。',  });"> 快影  <span style="color:#7bbfea">免责声明</span> </span>
+                            <span class="aui-well-item-fr"  style=" font-size: 12px; "  onClick="api.alert({title: '免责声明',msg: '本站所有视频均来自互联网，版权归原创者所有，如果侵犯了您的权益，请通知我们，我们将会在3个正常工作日内删除其侵权内容，谢谢合作。email：jushijie777@qq.com',  });"> 聚视界  <span style="color:#7bbfea">免责声明</span> </span>
                         </a>
 
 
@@ -266,23 +278,23 @@
 <script type="text/javascript" src="../script/api.js" ></script>
 <script type="text/javascript">
     var api_url = localStorage.getItem('api_url');
-var demo = null;
+
 
 /////  初始化执行   S /////
 /////  apiready  一打开就执行的 函数
     apiready = function () {
 
 
-                demo = api.require('qiyuSdk');
-//下拉刷新
+      //下拉刷新
           api.setCustomRefreshHeaderInfo({
               bgColor : '#fff',
-               //注释images: ['widget://image/app/xiala/cd.png',],         //
-			  images: ['widget://image/app/xiala/1.png','widget://image/app/xiala/2.png','widget://image/app/xiala/3.png','widget://image/app/xiala/4.png','widget://image/app/xiala/5.png','widget://image/app/xiala/6.png',],
+               images: [
+                    'widget://image/app/xiala/cd.png',
+                      ],
                       tips: {
-                          pull: '你…你想干什么！要刷新数据就拉到位！',
+                          pull: '你…你想干什么！你不要过来！',
                           threshold: '讨厌 快放开我 非礼呀！',
-                          load: '正在刷新页面数据，请等待。。。'
+                          load: '聚视界 享受生活'
                       }
 
           }, function() {
@@ -585,17 +597,17 @@ var demo = null;
       if (user_time>timestamp) {
       time_ico.innerHTML = ' 超级 VIP';
       time.innerHTML = ' 将于 '+s1+' 到期';
-      islogin_vip.innerHTML = ' <img src="../image/app/vip_huangjin.png" alt=""  style=" width: 55px; height: 15px; ">';
+      islogin_vip.innerHTML = ' <img src="../image/app/vip_huangjin.png" alt=""  style=" width: 15px; height: 15px; ">';
       }
       if (user_time<timestamp) {
       time_ico.innerHTML = ' 已过期';
         time.innerHTML = 'VIP已到期 请及时续费';
-      islogin_vip.innerHTML = ' <img src="../image/app/vip_guoqi.png" alt=""  style=" width: 55px; height: 15px; ">';
+      islogin_vip.innerHTML = ' <img src="../image/app/vip_guoqi.png" alt=""  style=" width: 15px; height: 15px; ">';
       }
       if(user_time == "-1" ) {
       time_ico.innerHTML = ' 超级 VIP ';
         time.innerHTML = ' 永久贵宾';
-      islogin_vip.innerHTML = ' <img src="../image/app/vip_yongjiu1.png" alt="" style=" width: 55px; height: 15px; ">';
+      islogin_vip.innerHTML = ' <img src="../image/app/vip_yongjiu.png" alt="" style=" width: 15px; height: 15px; ">';
       }
 
 
@@ -606,8 +618,8 @@ var demo = null;
          time_ico.innerHTML = ' 管理员 ';
            time.innerHTML = ' 欢迎回来！';
 
-           weichat.innerHTML = '微信号：15757938129';
-         islogin_vip.innerHTML = ' <img src="../image/app/vip_yongjiu.png" alt="" style=" width: 55px; height: 15px; ">';
+           weichat.innerHTML = '微信号：GOX718';
+         islogin_vip.innerHTML = ' <img src="../image/app/vip_yongjiu.png" alt="" style=" width: 15px; height: 15px; ">';
 
          islogin.innerHTML = ''+user_name;
          isloginOrOut .innerHTML = ' <div class="aui-panel-time"  onclick="exitLogin()">安全退出</div>';
@@ -838,7 +850,7 @@ function doItPerSecond() {
         if (localStorage.getItem('user_id')<1) {
 
           api.toast({
-    msg: '(快影提醒您！    你还没登陆！)',
+    msg: '(ｷ｀ﾟДﾟ´)!!    你还没登陆！',
     duration: 2000
 });
 
@@ -908,7 +920,7 @@ function doItPerSecond() {
                     if (localStorage.getItem('user_id')<1) {
 
                       api.toast({
-                msg: '(快影提醒您！    你还没登陆！)',
+                msg: '(ｷ｀ﾟДﾟ´)!!    你还没登陆！',
                 duration: 2000
             });
 
@@ -1041,7 +1053,7 @@ function kefuWeixin(){
           if (localStorage.getItem('user_id')<1) {
 
             api.toast({
-      msg: '(快影提醒您！    你还没登陆！)',
+      msg: '(ｷ｀ﾟДﾟ´)!!    你还没登陆！',
       duration: 2000
   });
 
@@ -1064,7 +1076,7 @@ function kefuWeixin(){
 
 
                 clipBoard.set({
-                    value: '15653538500'
+                    value: 'GOX718'
                 }, function(ret, err) {
                     if (ret) {
                       api.toast({
@@ -1193,7 +1205,7 @@ function DailiLogin(){
 //如果没登陆
 
 api.toast({
-msg: '(快影提醒您！    你还没登陆！)',
+msg: '(ｷ｀ﾟДﾟ´)!!    你还没登陆！',
 duration: 2000
 });
 
@@ -1264,14 +1276,14 @@ NoAgencyAuthority()
 
             api.openWin({
                  name: 'h5',
-                 url: 'http://ky.qiangoujie.com/index/index/index',
+                 url: 'http://movie.39zu.cn/index/index/index',
                 });
 */
                 api.openWin({
                     name: 'daili_guanli_win',
                     url: './daili_guanli_win.html',
                     delay: 800,
-                    pageParam:{url:'http://ky.qiangoujie.com/index/index/index'},
+                    pageParam:{url:'http://movie.39zu.cn/index/index/index'},
                     bgColor: 'rgba(0,0,0,0)'
                 });
 
@@ -1282,7 +1294,7 @@ NoAgencyAuthority()
          /*   alert('网络错误！');
                原弹窗提示*/
                api.toast({
-                   msg: '(快影提醒您！  网络错误 请检查！)',
+                   msg: '(ｷ｀ﾟДﾟ´)!!  网络错误 请检查！',
                    duration: 5000
                });
 
@@ -1325,7 +1337,7 @@ if (localStorage.getItem('user_id')==1)  {
                   name: 'daili_guanli_win',
                   url: './daili_guanli_win.html',
                   delay: 800,
-                  pageParam:{url:'http://ky.qiangoujie.com/index/index/index'},
+                  pageParam:{url:'http://movie.39zu.cn/index/index/index'},
                   bgColor: 'rgba(0,0,0,0)'
               });
 
@@ -1368,7 +1380,7 @@ function DailiQuma(){
 //如果没登陆
 
 api.toast({
-msg: '(快影提醒您！    你还没登陆！)',
+msg: '(ｷ｀ﾟДﾟ´)!!    你还没登陆！',
 duration: 2000
 });
 
@@ -1435,14 +1447,14 @@ NoAgencyAuthority()
 
             api.openWin({
                  name: 'h5',
-                 url: 'http://ky.qiangoujie.com/index/index/index',
+                 url: 'http://movie.39zu.cn/index/index/index',
                 });
 */
                 api.openWin({
                     name: 'daili_guanli_win',
                     url: './daili_guanli_win.html',
                     delay: 800,
-                    pageParam:{url:'http://ky.qiangoujie.com/index/dianka/index'},
+                    pageParam:{url:'http://movie.39zu.cn/index/dianka/index'},
                     bgColor: 'rgba(0,0,0,0)'
                 });
 
@@ -1453,7 +1465,7 @@ NoAgencyAuthority()
          /*   alert('网络错误！');
                原弹窗提示*/
                api.toast({
-                   msg: '(快影提醒您！  网络错误 请检查！)',
+                   msg: '(ｷ｀ﾟДﾟ´)!!  网络错误 请检查！',
                    duration: 5000
                });
 
@@ -1499,7 +1511,7 @@ NoAgencyAuthority()
                     name: 'daili_guanli_win',
                     url: './daili_guanli_win.html',
                     delay: 800,
-                    pageParam:{url:'http://ky.qiangoujie.com/index/dianka/index'},
+                    pageParam:{url:'http://movie.39zu.cn/index/dianka/index'},
                     bgColor: 'rgba(0,0,0,0)'
                 });
 
@@ -1546,7 +1558,7 @@ function DailiShezhi(){
 //如果没登陆
 
 api.toast({
-msg: '(快影提醒您！    你还没登陆！',
+msg: '(ｷ｀ﾟДﾟ´)!!    你还没登陆！',
 duration: 2000
 });
 
@@ -1613,14 +1625,14 @@ NoAgencyAuthority()
 
             api.openWin({
                  name: 'h5',
-                 url: 'http://ky.qiangoujie.com/index/index/index',
+                 url: 'http://movie.39zu.cn/index/index/index',
                 });
 */
                 api.openWin({
                     name: 'daili_guanli_win',
                     url: './daili_guanli_win.html',
                     delay: 800,
-                    pageParam:{url:'http://ky.qiangoujie.com/index/user/pass'},
+                    pageParam:{url:'http://movie.39zu.cn/index/user/pass'},
                     bgColor: 'rgba(0,0,0,0)'
                 });
 
@@ -1631,7 +1643,7 @@ NoAgencyAuthority()
          /*   alert('网络错误！');
                原弹窗提示*/
                api.toast({
-                   msg: '(快影提醒您！  网络错误 请检查！)',
+                   msg: '(ｷ｀ﾟДﾟ´)!!  网络错误 请检查！',
                    duration: 5000
                });
 
@@ -1676,7 +1688,7 @@ NoAgencyAuthority()
                     name: 'daili_guanli_win',
                     url: './daili_guanli_win.html',
                     delay: 800,
-                    pageParam:{url:'http://ky.qiangoujie.com/index/user/pass'},
+                    pageParam:{url:'http://movie.39zu.cn/index/user/pass'},
                     bgColor: 'rgba(0,0,0,0)'
                 });
 
@@ -1728,7 +1740,7 @@ function DailiGuanLi(){
 //如果没登陆
 
 api.toast({
-msg: '(快影提醒您！    你还没登陆！)',
+msg: '(ｷ｀ﾟДﾟ´)!!    你还没登陆！',
 duration: 2000
 });
 
@@ -1795,14 +1807,14 @@ NoAgencyAuthority()
 
             api.openWin({
                  name: 'h5',
-                 url: 'http://ky.qiangoujie.com/index/index/index',
+                 url: 'http://movie.39zu.cn/index/index/index',
                 });
 */
                 api.openWin({
                     name: 'daili_guanli_win',
                     url: './daili_guanli_win.html',
                     delay: 800,
-                    pageParam:{url:'http://ky.qiangoujie.com/index/vip/index'},
+                    pageParam:{url:'http://movie.39zu.cn/index/vip/index'},
                     bgColor: 'rgba(0,0,0,0)'
                 });
 
@@ -1813,7 +1825,7 @@ NoAgencyAuthority()
          /*   alert('网络错误！');
                原弹窗提示*/
                api.toast({
-                   msg: '(快影提醒您！  网络错误 请检查！)',
+                   msg: '(ｷ｀ﾟДﾟ´)!!  网络错误 请检查！',
                    duration: 5000
                });
 
@@ -1858,7 +1870,7 @@ NoAgencyAuthority()
                     name: 'daili_guanli_win',
                     url: './daili_guanli_win.html',
                     delay: 800,
-                    pageParam:{url:'http://ky.qiangoujie.com/index/vip/index'},
+                    pageParam:{url:'http://movie.39zu.cn/index/vip/index'},
                     bgColor: 'rgba(0,0,0,0)'
                 });
 
@@ -2052,32 +2064,6 @@ function NetworkConnectionFailurePrompt() {
 
 }
 //////////////////////    网络连接错误提示 方法 NetworkConnectionFailurePrompt  E  //////////////////////
-
-
-
-        function openServiceWindow() {
-                var source = {
-                        sourceTitle: '七鱼APICloud',
-                        sourceUrl: 'http://www.qiyukf.com',
-                        sourceCustomInfo: '我是来自自定义的信息',
-                };
-                var commodityInfo = {
-                        commodityInfoTitle: '开通代理',
-                        commodityInfoDesc: '开通代理即可月入过10W',
-                        pictureUrl: 'http://ky.qiangoujie.com/dlsp.png',
-                        commodityInfoUrl: '#',
-                        note: '￥咨询人工客服',
-                        show: true,
-                };
-                demo.openServiceWindow({
-                        source: source,
-                        commodityInfo: commodityInfo,
-                        sessionTitle: '个人中心',
-                });
-                api.toast({
-                        msg: '正在打开客服窗口'
-                });
-        }
 
 </script>
 

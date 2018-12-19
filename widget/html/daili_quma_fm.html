@@ -135,13 +135,13 @@
 
   function copySet(){
     api.ajax({
-        url: 'http://suo.im/api.php?url=http://ky.qiangoujie.com'+copy,
+        url: 'http://suo.im/api.php?url=http://movie.39zu.cn'+copy,
         method: 'get'
     },function(ret, err){
         if (ret) {
           var clipBoard = api.require('clipBoard');
           clipBoard.set({
-              value: '【聚合影视】全网VIP视频免费看，高清无广告，再也不用充值会员啦！APP下载地址：'+ret[0].url_short
+              value: '【聚视界】全网VIP视频免费看，高清无广告，再也不用充值会员啦！APP下载地址：'+ret[0].url_short
           }, function(ret, err) {
               if (ret) {
                 api.toast({
@@ -155,7 +155,7 @@
         } else {
           var clipBoard = api.require('clipBoard');
           clipBoard.set({
-              value: '【聚合影视】全网VIP视频免费看，高清无广告，再也不用充值会员啦！APP下载地址：'+copy
+              value: '【聚视界】全网VIP视频免费看，高清无广告，再也不用充值会员啦！APP下载地址：'+copy
           }, function(ret, err) {
               if (ret) {
                 api.toast({

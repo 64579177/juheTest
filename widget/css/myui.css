@@ -18,8 +18,14 @@ body {
 	color: #333;
 	background-color: #f5f5f9;
 	overflow-x: hidden;
+	-webkit-user-select:all
 	-webkit-overflow-scrolling: touch
 }
+
+*{
+  -webkit-user-select:auto !important;
+}
+
 
 body::-webkit-scrollbar {
 	display: none

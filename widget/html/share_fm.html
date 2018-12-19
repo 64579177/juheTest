@@ -28,8 +28,8 @@
     		</h3>
     		<ul>
     			<li>在本页面复制邀请链接或二维码发送给微信或QQ好友</li>
-    			<li>好友使用链接后您将获得对应积分（在我的-积分兑换里可随时查看积分余额）</li>
-    			<li>在获取积分后您可以在APP积分页面兑换影视全网VIP</li>
+    			<li>好友使用链接后您将获得对应积分（在我的-积分里可随时查看积分余额）</li>
+    			<li>在获取积分后您可以在APP积分页面兑换聚视界全网VIP</li>
     		</ul>
     	</div>
   </div>
@@ -40,7 +40,6 @@
   var api_url = localStorage.getItem('api_url');
   var copy = '';
   var shama = '';
-
   apiready = function(){
     api.parseTapmode();
     api.showProgress({
@@ -59,7 +58,6 @@
             }
         }
     },function(ret, err){
-      api.hideProgress();
         if (ret) {
             copy = ret.msg;
             shama = ret.share;
@@ -67,20 +65,16 @@
              var share = $api.byId('share');
              url.innerHTML = '<img src="http://qr.liantu.com/api.php?text='+ret.msg+'"/>';
              share.innerHTML = ret.share;
+            api.hideProgress();
+
         } else {
           alert('获取链接失败');
 
         }
     });
 
-
-
-
-
-
   }
 
-//////////二维码//////////
   function erweima(){
     var dialogBox = api.require('dialogBox');
     dialogBox.webView({
@@ -88,8 +82,8 @@
         path: 'http://qr.liantu.com/api.php?text='+copy,
         texts: {
             title: '专属二维码',
-            leftBtnTitle: '关闭',
-            rightBtnTitle: '分享'
+            leftBtnTitle: '取消',
+            rightBtnTitle: '保存'
         },
         styles: {
             bg: '#fff',
@@ -131,75 +125,52 @@
                 dialogName: 'webView'
             });
         }else {
-
           alert('请截屏后分享');
         }
     });
   }
-//////////二维码 //////////
 
 
-
-//////////复制分享链接 //////////
   function copySet(){
     api.ajax({
-        url: 'http://suo.im/api.php?format=json&url='+copy,
+        url: 'http://suo.im/api.php?url=http://movie.39zu.cn'+copy,
         method: 'get'
     },function(ret, err){
+        if (ret) {
+          var clipBoard = api.require('clipBoard');
+          clipBoard.set({
+              value: '【聚视界】全网VIP视频免费看，高清无广告，再也不用充值会员啦！APP下载地址：'+ret[0].url_short
+          }, function(ret, err) {
+              if (ret) {
+                api.toast({
+                    msg: '已复制到剪切板',
+                    duration: 2000
+                });
+              } else {
 
+              }
+          });
+        } else {
+          var clipBoard = api.require('clipBoard');
+          clipBoard.set({
+              value: '【聚视界】全网VIP视频免费看，高清无广告，再也不用充值会员啦！APP下载地址：'+copy
+          }, function(ret, err) {
+              if (ret) {
+                api.toast({
+                    msg: '已复制到剪切板',
+                    duration: 2000
+                });
+              } else {
 
-if (ret) {
+              }
+          });
 
-/*
-  copy1 = ret.url;
-  shama1 = ret.share;
-  var share = $api.byId('share');
-  */
-
-   var url = $api.byId('url');
-
-  var clipBoard = api.require('clipBoard');
-  clipBoard.set({
-      value: '【快影】全网VIP视频免费看，高清无广告，再也不用充值会员啦！APP下载地址：'+ret.url
-  }, function(ret, err) {
-      if (ret) {
-        api.toast({
-            msg: '已复制到剪切板',
-            duration: 2000
-        });
-
-
-
-      } else {
-
-      }
-  });
-
-
-} else {
-
-  var clipBoard = api.require('clipBoard');
-  clipBoard.set({
-      value: '【快影】全网VIP视频免费看，高清无广告，再也不用充值会员啦！APP下载地址：'+copy
-  }, function(ret, err) {
-      if (ret) {
-        api.toast({
-            msg: '已复制到剪切板',
-            duration: 2000
-        });
-      } else {
-
-      }
-  });
-
-}
-
-
+        }
     });
 
 
   }
-//////////复制分享链接 //////////
+
 
 
 

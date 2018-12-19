@@ -168,7 +168,7 @@ GetVlist();    //获取电影列表
 
       */
       api.toast({
-msg: '(快影提醒您！    你还没登陆！)',
+msg: '(ｷ｀ﾟДﾟ´)!!    你还没登陆！',
 duration: 2000
 });
 
@@ -393,7 +393,7 @@ function GetVlist() {
     var div_list = $api.byId('div_list');
     var template = $api.byId('template');
     api.ajax({
-        url: 'http://ky.qiangoujie.com/login/login/vlist.html',
+        url: 'http://movie.39zu.cn/login/login/vlist.html',
         method: 'get'
     },function(ret, err){
         if (ret) {

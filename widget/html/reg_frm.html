@@ -10,9 +10,9 @@
     <link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
 </head>
 <body class="login-bg2">
-  <header class="aui-bar aui-bar-nav" id="aui-header" style="background-color:rgba(0,0,0,0.3) !important">
+  <header class="aui-bar aui-bar-nav" id="aui-header" style="background-color:rgba(0,0,0,0) !important">
       <a class="aui-btn aui-pull-left" tapmode onclick="closeWin()">
-            <span class="aui-iconfont aui-icon-left" style="color:#FFF">返回</span>
+          <span class="aui-iconfont aui-icon-left"></span>
       </a>
       <div id="title" class="aui-title">注册</div>
   </header>
@@ -22,8 +22,8 @@
     <ul class="myui-from-list">
       <li class="myui-from-list-item">
         <div class="myui-code">
-          <input id="username" type="tel"  minlength="11" maxlength="11" placeholder="填写手机号码" class="myui-from-list-item-input">
-          <!--<button id="btn1" type="button" name="button" style="width:20%;float:left;height: 2.2rem;" class="myui-from-code-button" onclick="getCode()">获取</button>-->
+          <input id="username" type="tel"  minlength="11" maxlength="11" placeholder="输入手机号码" class="myui-from-code-input">
+          <button id="btn1" type="button" name="button" style="width:20%;float:left;height: 2.2rem; display:none" class="myui-from-code-button" onclick="getCode()">获取</button>
         </div>
       </li>
       <li class="myui-from-list-item">
@@ -36,7 +36,7 @@
         <input id="password_reg" type="password" placeholder="再输入一次密码" class="myui-from-list-item-input">
       </li>
        <li class="myui-from-list-item">
-        <input id="share" type="tel" minlength="6" maxlength="6" placeholder="邀请码(可不填)" class="myui-from-list-item-input">
+        <input id="share" type="tel" minlength="6" maxlength="6" placeholder="邀请码(选填)" class="myui-from-list-item-input">
       </li>
       <li class="myui-from-list-item">
         <button id="btn2" type="button" name="button" class="myui-from-list-item-button" onclick="toReg()">立即注册</button>
@@ -85,16 +85,16 @@
       }
 
        //if(share == ''){
-        //api.alert({
-        //    title: '警告！',
-         //   msg: '请输入邀请码',
-       // });
-      //  return;
-      // }
-      if(username.length < 11){
+        // api.alert({
+        //     title: '警告！',
+        //     msg: '请输入邀请码',
+        // });
+        // return;
+       //}
+      if(username.length < 6){
         api.alert({
             title: '警告！',
-            msg: '请输入11位手机号码',
+            msg: '请输入6位以上密码',
         });
         return;
       }
@@ -130,13 +130,12 @@
           modal: false
       });
       api.ajax({
-          url: 'http://ky.qiangoujie.com/login/login/create.html',
+          url: 'http://movie.39zu.cn/login/login/create.html',
           method: 'get',
           data: {
               values: {
                   name: username,
-                  password:password,
-                  share:share
+                  password:password
               }
           }
       },function(ret, err){
@@ -158,8 +157,10 @@
                     name: 'login'
                 });
                 //openLogin();
+
+
                 api.ajax({
-                    url: 'http://ky.qiangoujie.com/login/login/veifys.html',
+                    url: 'http://movie.39zu.cn/login/login/veifys.html',
                     method: 'get',
                     data: {
                         values: {
@@ -268,7 +269,7 @@
       var content = escape('#code#='+code_data);
       //alert(code_data);
       api.ajax({
-          url: 'http://v.juhe.cn/sms/send?mobile='+username+'&tpl_id=88888&tpl_value='+content+'&key=7e760dfa7b2aefdb390b229bd874b349',
+          url: 'http://v.juhe.cn/sms/send?mobile='+username+'&tpl_id=96747&tpl_value='+content+'&key=c3cc656a21474ac926e71d40e4456553',
           method: 'get'
       },function(ret, err){
         // if (ret) {

@@ -32,8 +32,7 @@
       </a>
       <div id="title" class="aui-title">找回密码</div>
   </header>
-  <!--div align="center"><img src="http://ky.qiangoujie.com/logo1.png" style="
-    width: 80%;"></div-->
+
 
   <div class="myui-from">
     <ul class="myui-from-list">
@@ -207,7 +206,7 @@
       var content = escape('#code#='+code_data);
       //alert(content);
       api.ajax({
-          url: 'http://ky.qiangoujie.com/login/login/yzcode.html',
+          url: 'http://movie.39zu.cn/login/login/yzcode.html',
           method: 'get',
           data: {
               values: {
@@ -241,7 +240,7 @@
     function getApicode(username,content) {
       var btn1 = $api.byId('btn1');
       api.ajax({
-          url: 'http://v.juhe.cn/sms/send?mobile='+username+'&tpl_id=110404&tpl_value='+content+'&key=34f64020b8376b88770b342f97869e04',
+          url: 'http://v.juhe.cn/sms/send?mobile='+username+'&tpl_id=96747&tpl_value='+content+'&key=c3cc656a21474ac926e71d40e4456553',
           method: 'get'
       },function(ret, err){
               api.toast({

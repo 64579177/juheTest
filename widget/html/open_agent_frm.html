@@ -125,12 +125,8 @@
     <div class="aui-content-padded">
 
         <p><div class="aui-btn-tuichu aui-btn-block" tapmode onclick="kefuWeixin()"  id="weichat">联系客服开通 客服微信：---</div></p>
-        <br>
-        <div class="">
-            <img src="../image/555.png" alt="" width="100%">
-          </div>
-          
-  <!--div class="open-vip-b" >
+
+  <div class="open-vip-b" >
 
 
 
@@ -144,15 +140,6 @@
       <div class="vip_gou_1" >
           <div  class="vip_gou_2"><span class="vip_gou_3">体验卡</span>  </div>
           <div class="vip_gou_4"><h2  class="vip_gou_5">7天 全网视频VIP</h2>
-              <p class="vip_gou_6" ><em class="vip_gou_7">￥1</em></p>
-          </div>
-          <div  class="vip_gou_8" >代理价：￥0.5</div>
-      </div>
-
-
-      <div class="vip_gou_1" >
-          <div  class="vip_gou_2"><span class="vip_gou_3">月卡</span>  </div>
-          <div class="vip_gou_4"><h2  class="vip_gou_5">每天约 0.1 元</h2>
               <p class="vip_gou_6" ><em class="vip_gou_7">￥3</em></p>
           </div>
           <div  class="vip_gou_8" >代理价：￥1</div>
@@ -160,40 +147,48 @@
 
 
       <div class="vip_gou_1" >
-          <div  class="vip_gou_2"><span class="vip_gou_3">季卡</span>  </div>
-          <div class="vip_gou_4"><h2  class="vip_gou_5">每天约 0.09 元</h2>
-              <p class="vip_gou_6" ><em class="vip_gou_7">￥8</em></p>
+          <div  class="vip_gou_2"><span class="vip_gou_3">月卡</span>  </div>
+          <div class="vip_gou_4"><h2  class="vip_gou_5">每天约 0.2 元</h2>
+              <p class="vip_gou_6" ><em class="vip_gou_7">￥6</em></p>
           </div>
           <div  class="vip_gou_8" >代理价：￥2</div>
       </div>
 
       <div class="vip_gou_1" >
-          <div  class="vip_gou_2"><span class="vip_gou_3">半年卡</span>  </div>
-          <div class="vip_gou_4"><h2  class="vip_gou_5">每天约 0.08 元</h2>
+          <div  class="vip_gou_2"><span class="vip_gou_3">季卡</span>  </div>
+          <div class="vip_gou_4"><h2  class="vip_gou_5">每天约 0.16 元</h2>
               <p class="vip_gou_6" ><em class="vip_gou_7">￥15</em></p>
           </div>
-          <div  class="vip_gou_8" >代理价：￥5</div>
+          <div  class="vip_gou_8" >代理价：￥3</div>
+      </div>
+
+      <div class="vip_gou_1" >
+          <div  class="vip_gou_2"><span class="vip_gou_3">半年卡</span>  </div>
+          <div class="vip_gou_4"><h2  class="vip_gou_5">每天约 0.13 元</h2>
+              <p class="vip_gou_6" ><em class="vip_gou_7">￥25</em></p>
+          </div>
+          <div  class="vip_gou_8" >代理价：￥4</div>
       </div>
 
       <div class="vip_gou_1" >
           <div  class="vip_gou_2"><span class="vip_gou_3">年卡</span>  </div>
-          <div class="vip_gou_4"><h2  class="vip_gou_5">每天约 0.08 元</h2>
-              <p class="vip_gou_6" ><em class="vip_gou_7">￥25</em></p>
+          <div class="vip_gou_4"><h2  class="vip_gou_5">每天约 0.1 元</h2>
+              <p class="vip_gou_6" ><em class="vip_gou_7">￥40</em></p>
           </div>
-          <div  class="vip_gou_8" >代理价：￥9</div>
+          <div  class="vip_gou_8" >代理价：￥5</div>
       </div>
 
       <div class="vip_gou_1">
-          <div  class="vip_gou_2"><span class="vip_gou_3">永久</span>  </div>
-          <div class="vip_gou_4"><h2  class="vip_gou_5">全网VIP视频永久观看</h2>
-              <p class="vip_gou_6" ><em class="vip_gou_7">￥299</em></p>
+          <div  class="vip_gou_2"><span class="vip_gou_3">合伙人</span>  </div>
+          <div class="vip_gou_4"><h2  class="vip_gou_5">合伙人免费提卡，仅388元</h2>
+              <p class="vip_gou_6" ><em class="vip_gou_7">免费提卡</em></p>
           </div>
-          <div  class="vip_gou_8" >代理价：￥69</div>
+          <div  class="vip_gou_8" >合伙人：388元</div>
       </div>
 
 
 
-  </div-->
+  </div>
 
     </div>
   </div>
@@ -559,7 +554,7 @@
           //获取客服微信号
           var user_weichat = localStorage.getItem('user_weichat');
           if (user_weichat == 'null') {
-          weichat.innerHTML = '联系客服开通 客服微信：：15653538500';
+          weichat.innerHTML = '联系客服开通 客服微信：：GOX718';
         }else {
 
             weichat.innerHTML = '联系客服开通 客服微信：'+user_weichat;
@@ -641,7 +636,7 @@
                       dialogBox.alert({
                           tapClose: false,  //描述：（可选项）是否点击遮罩层关闭该对话框  默认值：false
                           texts: {
-                              content: '请联系微信：15653538500',
+                              content: '请联系微信：Gox718',
                             /*  leftBtnTitle: '以后再说',  */
                               rightBtnTitle: '知道了'
                           },

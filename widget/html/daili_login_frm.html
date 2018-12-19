@@ -81,7 +81,7 @@
       <input type="tel" minlength="11" maxlength="11" id="username" placeholder="请输入账号" class="myui-from-list-item-input" value ="" disabled="disabled">
     </li>
     <li class="myui-from-list-item">
-      <input id="password" type="password" placeholder="为了安全请再次输入密码" class="myui-from-list-item-input" value ="">
+      <input id="password" type="password" placeholder="请输入密码" class="myui-from-list-item-input" value ="">
     </li>
     <li class="myui-from-list-item">
       <button type="button" name="button" class="myui-from-list-item-button" onclick="loginTo()">代理登录</button>
@@ -238,7 +238,7 @@ api.toast({
         //请求数据库并存储用户信息
         var api_url = localStorage.getItem('api_url');
         api.ajax({
-            url: 'http://ky.qiangoujie.com/login/login/veify',
+            url: 'http://movie.39zu.cn/login/login/veify',
             method: 'POST',
             data: {
                 values: {
@@ -286,14 +286,14 @@ api.toast({
 
               /*    api.openWin({
                     name: 'h5',
-                    url: 'http://ky.qiangoujie.com/index/index/index',
+                    url: 'http://movie.39zu.cn/index/index/index',
                    });
 */
                    api.openWin({
                        name: 'video_win',
                        url: './video_win.html',
                        delay: 800,
-                       pageParam:{url:'http://ky.qiangoujie.com/index/index/index'},
+                       pageParam:{url:'http://movie.39zu.cn/index/index/index'},
                        bgColor: 'rgba(0,0,0,0)'
                    });
 
@@ -304,7 +304,7 @@ api.toast({
             /*   alert('网络错误！');
                   原弹窗提示*/
                   api.toast({
-                      msg: '(快影提醒您！  网络错误 请检查！)',
+                      msg: '(ｷ｀ﾟДﾟ´)!!  网络错误 请检查！',
                       duration: 5000
                   });
 

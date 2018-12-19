@@ -613,7 +613,7 @@ var api_url = localStorage.getItem('api_url');
     var div_list = $api.byId('div_list');
     var template = $api.byId('template');
     api.ajax({
-        url: 'http://ky.qiangoujie.com/login/login/tvlist.html',
+        url: 'http://movie.39zu.cn/login/login/tvlist.html',
         method: 'get'
     },function(ret, err){
         if (ret) {
@@ -696,7 +696,7 @@ clearInterval(GetTvlistTimer); // 获取成功 清除定时器
 
       /*新提示*/
       api.toast({
-          msg: '(快影提醒您！    你还没登陆！)',
+          msg: '(ｷ｀ﾟДﾟ´)!!    你还没登陆！',
           duration: 2000
       });
       api.openWin({

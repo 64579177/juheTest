@@ -688,7 +688,7 @@ a {
 }
 
 .aui-navBar {
-    height: 90px;
+    height: 70px;
     position: relative;
     display: -webkit-box;
     display: -webkit-flex;
@@ -701,7 +701,7 @@ a {
 
 .aui-navBar-item {
     height: 44px;
-    min-width: 20%;
+    min-width: 30%;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 25%;
     -ms-flex: 0 0 25%;
@@ -867,20 +867,7 @@ a {
   /*  margin-right: 10px;  */
     background-image: url("../image/app/blackRefresh.png");
 }
-.icon-bofang {
-    width: 15px;
-    height: 15px;
-    background-size: 15px;
-  /*  margin-right: 10px;  */
-    background-image: url("../image/app/bofang.png");
-}
-.icon-bofang1 {
-    width: 15px;
-    height: 15px;
-    background-size: 15px;
-  /*  margin-right: 10px;  */
-    background-image: url("../image/app/bofang1.png");
-}
+
 .icon-Close-b {
     width: 15px;
     height: 15px;

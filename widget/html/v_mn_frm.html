@@ -179,7 +179,7 @@ GetVlist();    //获取电影列表
 
       */
       api.toast({
-msg: '(快影提醒您！    你还没登陆！)',
+msg: '(ｷ｀ﾟДﾟ´)!!    你还没登陆！',
 duration: 2000
 });
 
@@ -404,9 +404,8 @@ function GetVlist() {
     var div_list = $api.byId('div_list');
     var template = $api.byId('template');
     api.ajax({
-      //全部列表  url: 'http://ky.qiangoujie.com/login/login/mnlist.html',
-             // url: 'http://ky.qiangoujie.com/login/login/mnlistRandom.html',    //随机获取12
-		url: 'http://ky.qiangoujie.com/login/login/mnlist.html',
+      //全部列表  url: 'http://movie.39zu.cn/login/login/mnlist.html',
+        url: 'http://movie.39zu.cn/login/login/mnlist.html',    //随机获取12
         method: 'get'
     },function(ret, err){
         if (ret) {
